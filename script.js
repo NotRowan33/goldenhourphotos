@@ -8,20 +8,29 @@ const closeBtn = document.querySelector('.close');
 // Open lightbox when an image is clicked
 galleryImages.forEach(image => {
   image.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = image.src; // Use the clicked image's source
-    lightboxImg.alt = image.alt; // Use the clicked image's alt text
+    lightbox.style.display = 'flex'; // Show the lightbox
+    lightboxImg.src = image.src; // Set the clicked image as the source
+    lightboxImg.alt = image.alt; // Set alt text for accessibility
+    setTimeout(() => {
+      lightbox.classList.add('show'); // Add animation class after a slight delay
+    }, 10); // Slight delay to ensure transition works
   });
 });
 
 // Close lightbox when the close button is clicked
 closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+  lightbox.classList.remove('show'); // Remove animation class
+  setTimeout(() => {
+    lightbox.style.display = 'none'; // Hide the lightbox after transition
+  }, 400); // Match the CSS transition duration
 });
 
 // Close lightbox when clicking outside the image
 lightbox.addEventListener('click', (e) => {
   if (e.target !== lightboxImg) {
-    lightbox.style.display = 'none';
+    lightbox.classList.remove('show'); // Remove animation class
+    setTimeout(() => {
+      lightbox.style.display = 'none'; // Hide the lightbox after transition
+    }, 400); // Match the CSS transition duration
   }
 });
