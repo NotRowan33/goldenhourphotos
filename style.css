@@ -21,20 +21,22 @@ main {
   padding: 20px;
 }
 
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Space between images */
-  justify-content: center;
-  align-items: center;
-}
-
 .image-gallery img {
-  width: 100%; /* Full width of grid cell */
+  width: 100%; /* Full width of the grid cell */
+  max-width: 300px; /* Set a maximum width for each image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* Subtle white shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid */
+  gap: 20px; /* Space between images */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .image-gallery img:hover {
