@@ -42,6 +42,21 @@ h1 {
   box-shadow: 0 8px 12px rgba(255, 255, 255, 0.4);
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 2px solid white;
+  margin-top: 20px;
+  position: relative; /* Ensure it's not affected by the lightbox */
+  z-index: 1; /* Keep it above background, below lightbox */
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 /* Lightbox styles */
 .lightbox {
   display: none; /* Hidden by default */
