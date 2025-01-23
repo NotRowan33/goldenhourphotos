@@ -107,3 +107,33 @@ footer p {
 .close:hover {
   color: #ff3e3e; /* Add a hover effect */
 }
+
+/* Instagram Logo in the top right */
+.instagram-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px; /* Adjust size */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.instagram-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  color: #E1306C; /* Instagram color when hovered */
+}
+
+img.instagram-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px; /* Adjust size */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+img.instagram-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}
