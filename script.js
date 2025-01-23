@@ -12,24 +12,24 @@ galleryImages.forEach(image => {
     lightboxImg.src = image.src; // Set clicked image source
     setTimeout(() => {
       lightbox.classList.add('show'); // Trigger animation
-    }, 10);
+    }, 10); // Slight delay for smooth transition
   });
 });
 
 // Close lightbox when the close button is clicked
 closeBtn.addEventListener('click', () => {
-  lightbox.classList.remove('show'); // Remove animation
+  lightbox.classList.remove('show'); // Remove animation class
   setTimeout(() => {
-    lightbox.style.display = 'none'; // Hide lightbox
-  }, 400); // Wait for animation to finish
+    lightbox.style.display = 'none'; // Hide the lightbox after animation
+  }, 400); // Match CSS animation duration
 });
 
 // Close lightbox when clicking outside the image
 lightbox.addEventListener('click', (e) => {
   if (e.target !== lightboxImg) {
-    lightbox.classList.remove('show');
+    lightbox.classList.remove('show'); // Remove animation class
     setTimeout(() => {
-      lightbox.style.display = 'none';
-    }, 400);
+      lightbox.style.display = 'none'; // Hide the lightbox after animation
+    }, 400); // Match the CSS animation duration
   }
 });
