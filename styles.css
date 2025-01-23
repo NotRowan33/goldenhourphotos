@@ -53,31 +53,32 @@ footer {
  
 /* Lightbox styles */
 .lightbox {
-  display: none; /* Hidden by default */
+  display: none; /* Initially hidden */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Darker background for sleek look */
+  background-color: rgba(0, 0, 0, 0.9); /* Darker overlay */
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .lightbox-content {
-  max-width: 60%; /* Set a smaller maximum width for the image */
-  max-height: 80%; /* Keep image visible without scrolling */
-  border-radius: 10px;
+  max-width: 60%; /* Limit the image size */
+  max-height: 80%; /* Fit the viewport */
+  border-radius: 10px; /* Rounded corners */
   box-shadow: 0 8px 12px rgba(255, 255, 255, 0.3);
-  transform: scale(0.8); /* Initial smaller size for animation */
+  transform: scale(0.8); /* Initial state for animation */
   opacity: 0; /* Hidden initially */
-  transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth animation */
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth animations */
 }
 
 .lightbox.show .lightbox-content {
-  transform: scale(1); /* Full size when visible */
-  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Fully visible */
+  opacity: 1;
 }
 
 .close {
@@ -87,9 +88,8 @@ footer {
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  z-index: 1001;
 }
 
 .close:hover {
-  color: #ff3e3e; /* Add a hover effect to the close button */
+  color: #ff3e3e; /* Subtle hover effect */
 }
