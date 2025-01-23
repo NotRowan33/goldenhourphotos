@@ -19,15 +19,8 @@ h1 {
 
 main {
   padding: 20px;
-}
-
-.image-gallery img {
-  width: 100%; /* Full width of the grid cell */
-  max-width: 300px; /* Set a maximum width for each image */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* Subtle white shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  max-width: 1200px; /* Limit the main content width */
+  margin: 0 auto; /* Center the main content */
 }
 
 .image-gallery {
@@ -39,6 +32,15 @@ main {
   padding: 10px;
 }
 
+.image-gallery img {
+  width: 100%; /* Full width of the grid cell */
+  max-width: 250px; /* Further limit the image size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* Subtle white shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
 .image-gallery img:hover {
   transform: scale(1.05); /* Slight zoom on hover */
   box-shadow: 0 8px 12px rgba(255, 255, 255, 0.4); /* Enhanced shadow on hover */
@@ -48,10 +50,4 @@ footer {
   text-align: center;
   padding: 10px 0;
   border-top: 2px solid white;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
+ 
