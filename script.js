@@ -8,29 +8,28 @@ const closeBtn = document.querySelector('.close');
 // Open lightbox when an image is clicked
 galleryImages.forEach(image => {
   image.addEventListener('click', () => {
-    lightbox.style.display = 'flex'; // Show the lightbox
-    lightboxImg.src = image.src; // Set the clicked image as the source
-    lightboxImg.alt = image.alt; // Set alt text for accessibility
+    lightbox.style.display = 'flex'; // Show lightbox
+    lightboxImg.src = image.src; // Set clicked image source
     setTimeout(() => {
-      lightbox.classList.add('show'); // Add animation class after a slight delay
-    }, 10); // Slight delay to ensure transition works
+      lightbox.classList.add('show'); // Trigger animation
+    }, 10);
   });
 });
 
 // Close lightbox when the close button is clicked
 closeBtn.addEventListener('click', () => {
-  lightbox.classList.remove('show'); // Remove animation class
+  lightbox.classList.remove('show'); // Remove animation
   setTimeout(() => {
-    lightbox.style.display = 'none'; // Hide the lightbox after transition
-  }, 400); // Match the CSS transition duration
+    lightbox.style.display = 'none'; // Hide lightbox
+  }, 400); // Wait for animation to finish
 });
 
 // Close lightbox when clicking outside the image
 lightbox.addEventListener('click', (e) => {
   if (e.target !== lightboxImg) {
-    lightbox.classList.remove('show'); // Remove animation class
+    lightbox.classList.remove('show');
     setTimeout(() => {
-      lightbox.style.display = 'none'; // Hide the lightbox after transition
-    }, 400); // Match the CSS transition duration
+      lightbox.style.display = 'none';
+    }, 400);
   }
 });
