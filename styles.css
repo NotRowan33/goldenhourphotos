@@ -137,3 +137,35 @@ img.instagram-logo {
 img.instagram-logo:hover {
   transform: scale(1.1); /* Slight zoom effect */
 }
+
+/* Home Page Styles */
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffcc00;
+  color: black;
+}
