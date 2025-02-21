@@ -33,3 +33,11 @@ lightbox.addEventListener('click', (e) => {
     }, 400); // Match the CSS animation duration
   }
 });
+// Select the menu button and sidebar
+const menuBtn = document.querySelector('.menu-btn');
+const sidebar = document.querySelector('.sidebar');
+
+// Toggle menu on button click
+menuBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('show');
+});
