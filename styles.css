@@ -169,3 +169,57 @@ img.instagram-logo:hover {
   background-color: #ffcc00;
   color: black;
 }
+/* Hamburger Menu Button */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px; /* Matches Instagram icon size */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Dark background */
+  padding-top: 60px;
+  transition: left 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar Open State */
+.sidebar.show {
+  left: 0;
+}
