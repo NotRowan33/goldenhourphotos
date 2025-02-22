@@ -223,3 +223,13 @@ img.instagram-logo:hover {
 .sidebar.show {
   left: 0;
 }
+/* Remove blue click effect (outline) */
+button, a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* For mobile devices (removes highlight when tapping) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
