@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.category {
+  margin: 40px 0;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+}
+/* Instagram Icon in Top-Right Corner */
+.instagram-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px; /* Adjust icon size */
+  color: black; /* Default black icon */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.instagram-link:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  color: #333; /* Darker black on hover */
+}
+/* Remove blue click effect (outline) */
+button, a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* For mobile devices (removes highlight when tapping) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
